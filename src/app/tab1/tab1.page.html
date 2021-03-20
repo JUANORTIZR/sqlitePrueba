@@ -6,12 +6,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input [(ngModel)]="person.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">FirstName</ion-label>
+    <ion-input [(ngModel)]="person.firstName"></ion-input>
+  </ion-item>
+ 
+  <ion-button (click)="save()" expand="block">
+    Guardar
+  </ion-button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-list>
+    <ion-item *ngFor="let person of persons|async">
+      <ion-label>
+        <h3>{{person.name}}</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

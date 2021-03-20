@@ -1,5 +1,8 @@
 {
   "name": "sqliteIonic",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }
