@@ -69,7 +69,7 @@ export class DataService {
             firstName: r.rows.item(i).firstName
           }
          
-          this.persons.push(person);
+          this.persons.unshift(person);
         }
       }
     });
